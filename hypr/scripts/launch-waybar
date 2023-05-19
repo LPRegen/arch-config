@@ -1,0 +1,13 @@
+#!/bin/bash
+
+CONFIG_FILES="$HOME/.config/hypr/waybar/config $HOME/.config/hypr/waybar/style.css $HOME/.config/hypr/waybar/modules"
+CONFIG="$HOME/.config/hypr/waybar/config"
+STYLE="$HOME/.config/hypr/waybar/style.css"
+
+trap "killall waybar" EXIT
+
+while true; do
+  waybar --log-level error --config ${CONFIG} --style ${STYLE} &
+    inotifywait -e create,modify $CONFIG_FILES
+    killall waybar
+done

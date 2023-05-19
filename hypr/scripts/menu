@@ -1,0 +1,7 @@
+#!/bin/bash
+
+if [[ ! $(pidof wofi) ]]; then
+  wofi --show drun --prompt 'Search' --conf ~/.config/hypr/wofi/config --style ~/.config/hypr/wofi/style.css --color ~/.config/hypr/wofi/colors
+else
+  pkill wofi
+fi

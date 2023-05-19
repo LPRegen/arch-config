@@ -1,0 +1,105 @@
+{
+	"layer": "top",
+  "output": "eDP-1",
+	"modules-left": ["custom/launcher","cpu","memory","tray"],
+	"modules-center": ["wlr/workspaces"],
+	"modules-right": ["network","backlight","pulseaudio","clock", "battery","custom/power"],
+	
+	"pulseaudio": {
+    "format": "<span font='13' rise='1000'>{icon}</span> {volume}",
+    "tooltip-format": "{volume}",
+    "format-muted": "<span font='13' rise='1000'></span>",
+    "format-bluetooth": "<span font='13' rise='1000'></span> {volume} {format_source}",
+    "format-bluetooth-muted": "<span font='13' rise='1000'></span> Mute",
+    "format-source": "<span font='13' rise='1000'></span> {volume}",
+    "format-source-muted": "<span font='13' rise='1000'></span>",
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": ["", "", ""]
+    },
+    "scroll-step": 5.0,
+    "on-click": "pamixer -t",
+    "on-click-right": "kitty --class update -T update -e pulsemixer",
+    "on-click-middle": "pavucontrol",
+    "on-scroll-up": "~/.config/hypr/scripts/volume --inc",
+    "on-scroll-down": "~/.config/hypr/scripts/volume --dec",
+    "smooth-scrolling-threshold": 1,
+  },
+
+   "wlr/workspaces": {
+  "format": "{icon}",
+  "on-click": "activate",
+  "format-icons": {
+    "1": "",
+    "2": "",
+    "3": "",
+    "4": "",
+    "5": "",
+    "urgent": "",
+    "active": "",
+    "default": ""
+  },
+  "sort-by-number": true, 
+  "all-outputs": true,
+},
+"network": {
+    "interval": 5,
+    "format-wifi": "<span font='10' rise='2000'></span> {signalStrength}%",
+    "format-ethernet": "<span font='11' rise='1000'></span> {ipaddr}/{cidr}",
+    "format-linked": "<span font='11' rise='1000'></span> {ifname} (No IP)",
+    "format-disconnected": "<span font='11' rise='1000'>睊</span> Disconnected",
+    "format-disabled": "<span font='11' rise='1000'>睊</span> Disabled",
+    "format-alt": "<span font='11' rise='1000'></span> {bandwidthUpBits} | <span font='13' rise='1000'></span> {bandwidthDownBits}",
+    "tooltip-format": "<span font='11' rise='1000'></span> {ifname} {essid} via {gwaddr}",
+    "on-click-right": "~/.local/bin/mmuvpn up cbj",
+  },	"backlight": {
+		"tooltip": false,
+		"format": " {}%",
+		"interval":1,
+        "on-scroll-up": "light -A 5",
+		"on-scroll-down": "light -U 5"
+	},
+    "battery": {
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 20
+        },
+        "format": "{icon}  {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-alt": "{time} {icon}",
+        "format-icons": ["", "", "", "", ""]
+    },
+	"tray":{
+		"icon-size":18,
+		"spacing": 10
+	},
+    "clock": {
+        "format": "{: %I:%M %p   %d/%m/%Y}"
+    },
+    "cpu": {
+        "interval": 15,
+        "format": " {}%",
+        "max-length": 10
+    },
+    "memory": {
+        "interval": 30,
+        "format": " {}%",
+        "max-length": 10
+    },
+        "custom/launcher":{
+        "format": " ",
+        "on-click": "~/.config/hypr/scripts/menu",
+        "on-click-right": "killall wofi"
+    },
+    "custom/power":{
+        "format": "󰿅 ",
+        "on-click": "bash ~/.config/rofi/scripts/powermenu_t3",
+    },
+   }
