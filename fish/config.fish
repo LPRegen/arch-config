@@ -2,20 +2,15 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
-#   Update personal notes
-alias upnotes="cd ~/dev/personalNotes; gs; ga .; cm 'update notes' .; git push"
-# Set secondary monitor.
-alias secMonitor="xrandr --output eDP --primary --mode 1920x1080 --rotate normal --output HDMI-A-0 --mode 1360x768 --rotate normal --right-of eDP"
-
 ###	      Commands
 #   Navigation
 alias z='cd ..'
 
 #   Pacman
-alias pacup="sudo pacman -Syu --noconfirm"
-alias pacin="sudo pacman -S"
-alias pacre="sudo pacman -Rsn"
-alias pacqry="sudo pacman -Qs"
+alias pacu="sudo pacman -Syu --noconfirm"
+alias paci="sudo pacman -S"
+alias pacr="sudo pacman -Rsn"
+alias pacq="sudo pacman -Qs"
 alias pacdb="sudo pacman -Ss"
 
 #   Github
@@ -41,13 +36,16 @@ alias yt="yarn test"
 alias ys="yarn storybook"
 
 ### 	    Nvim configs
-alias nc="env NVIM_APPNAME=nvim-chad nvim"
-alias nm="env NVIM_APPNAME=nvim-manu nvim"
+alias nm="nvim"
+alias mm="cd ~/.config/nvim/; nm"
 
-
-alias cc="cd ~/.config/nvim-chad/lua/custom/; env NVIM_APPNAME=nvim-chad nvim"
-alias mm="cd ~/.config/nvim-manu/; nm"
+# Launch nvim nightly with a specific config.
+# alias nc="env NVIM_APPNAME=nvim-chad nvim"
+# alias nm="env NVIM_APPNAME=nvim-manu nvim"
 # INFO: https://gist.github.com/elijahmanor/b279553c0132bfad7eae23e34ceb593b
+
+
+# alias cc="cd ~/.config/nvim-chad/lua/custom/; env NVIM_APPNAME=nvim-chad nvim"
 
 ###       Directories
 #   Projects
