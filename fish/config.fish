@@ -18,6 +18,7 @@ alias gs="git status"
 alias ga="git add"
 alias cm="git commit -m"
 alias gc="git checkout"
+alias gC="git clone"
 alias gpl="git pull"
 alias gps="git push"
 alias gr="git restore"
@@ -54,6 +55,7 @@ alias por="cd ~/dev/portfolio/; nm"
 
 #   Fish
 alias cf="cd ~/.config/fish/; nm config.fish"
+alias ch="cd ~/.config/hypr/; nm"
 
 
 starship init fish | source
