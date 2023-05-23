@@ -41,7 +41,9 @@
     "4": "",
     "5": "",
     "urgent": "",
-    "active": "",
+
+    // NOTE: Uncomment this to display the 'active' icon instead the current workspace's icon.
+    // "active": "",
     "default": ""
   },
   "sort-by-number": true, 
