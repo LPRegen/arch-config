@@ -70,7 +70,7 @@
   },
 
   "memory": {
-    "interval": 10,
+    "interval": 2,
     "format": "<span font='11' rise='500'>󰍛</span> {}%",
     "format-alt": "<span font='13' rise='1000'></span> {used:0.1f}G",
   },
