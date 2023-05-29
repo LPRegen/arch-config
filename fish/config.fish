@@ -2,7 +2,6 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
-###	      Commands
 #   Navigation
 alias z='cd ..'
 
@@ -24,10 +23,13 @@ alias gps="git push"
 alias gr="git restore"
 alias grs="git restore --staged"
 alias grsh="git reset --soft HEAD~1"
-#- Stash
+#   Stash
 alias gsa="git stash"
 alias gsp="git stash pop"
 # INFO: https://www.atlassian.com/git/tutorials/saving-changes/git-stash#stashing-your-work
+
+#   Browsers to localhost
+alias fdv="firefox-developer-edition --new-tab http://localhost:3000/"
 
 #   Yarn
 alias yd="yarn dev"
@@ -45,9 +47,6 @@ alias mm="cd ~/.config/nvim/; nm"
 # alias nm="env NVIM_APPNAME=nvim-manu nvim"
 # INFO: https://gist.github.com/elijahmanor/b279553c0132bfad7eae23e34ceb593b
 
-
-# alias cc="cd ~/.config/nvim-chad/lua/custom/; env NVIM_APPNAME=nvim-chad nvim"
-
 ###       Directories
 #   Projects
 alias jug="cd ~/dev/juguetear-web/; nm"
@@ -55,6 +54,7 @@ alias por="cd ~/dev/portfolio/; nm"
 
 #   Fish
 alias cf="cd ~/.config/fish/; nm config.fish"
+#   Hyprland
 alias ch="cd ~/.config/hypr/; nm"
 
 
