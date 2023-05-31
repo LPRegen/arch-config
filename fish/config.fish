@@ -30,6 +30,7 @@ alias gsp="git stash pop"
 
 #   Browsers to localhost
 alias fdv="firefox-developer-edition --new-tab http://localhost:3000/"
+alias gdv="google-chrome-stable --new-tab http://localhost:3000/"
 
 #   Yarn
 alias yd="yarn dev"
